@@ -1,0 +1,31 @@
+@use 'variables' as v;
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 100%;
+    font-weight: 700;
+    color: v.$black;
+    background: v.$bg-color;
+}
+
+button {
+    font: inherit;
+}
+
+a,
+a:visited,
+a:hover {
+    text-decoration: none;
+} 

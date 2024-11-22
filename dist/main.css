@@ -1,0 +1,293 @@
+@font-face {
+  font-family: "roboto-bold";
+  src: url("../../assets/fonts/Roboto/Roboto-Bold.ttf");
+}
+@font-face {
+  font-family: "Roboto-BlackItalic";
+  src: url("../../assets/fonts/Roboto/Roboto-BlackItalic.ttf");
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 100%;
+  font-weight: 700;
+  color: hsl(20, 5%, 0%);
+  background: #f4f4f4;
+}
+
+button {
+  font: inherit;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+}
+header nav {
+  background: #f4f4f4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 5%;
+  overflow: hidden;
+  z-index: 1;
+}
+header nav figure {
+  width: 100%;
+  height: auto;
+}
+header nav figure img {
+  width: 200px;
+  height: auto;
+}
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+header nav ul li {
+  margin: 0 15px;
+  display: flex;
+}
+header nav ul li a {
+  color: hsl(20, 5%, 0%);
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: roboto-bold;
+  transition: 0.3s ease-in;
+}
+header nav ul li a:focus,
+header nav ul li a:hover {
+  color: hsl(14, 86%, 42%);
+  text-decoration: underline;
+}
+header .hero {
+  width: 100%;
+  padding: 150px 5%;
+  display: flex;
+  flex-flow: row wrap;
+  flex: 0 0 200px;
+  gap: 3rem;
+  justify-content: space-between;
+  align-items: center;
+}
+header .hero .left {
+  line-height: 1.4;
+}
+header .hero .left h1 {
+  padding-bottom: 5px;
+  border: 50px;
+  font-size: 4.3rem;
+  margin: 8px auto;
+  font-family: Roboto-BlackItalic;
+  color: rgb(20, 3, 35);
+}
+header .hero .left h1 span {
+  color: hsl(12, 20%, 44%);
+  border-bottom: 4px solid hsl(14, 86%, 12%);
+}
+header .hero .left h2 {
+  font-size: 2.2rem;
+  font-family: roboto-bold;
+}
+header .hero .left h3 {
+  font-size: 1.6rem;
+  font-family: sans-serif;
+  margin: 10px auto;
+}
+header .hero .left h3 span {
+  color: rgb(246, 100, 48);
+}
+header .hero .left p {
+  font-size: 1.4;
+  line-height: 1.4;
+  font-family: roboto-bold;
+  letter-spacing: 0.1em;
+}
+
+main .courses {
+  width: 100%;
+  position: relative;
+}
+main .courses h2 {
+  text-align: center;
+  margin: 20px auto;
+  font-size: 3rem;
+  font-family: roboto-bold;
+}
+main .courses .h3 {
+  text-align: center;
+  margin: 20px auto;
+  font-size: 1.2rem;
+  letter-spacing: 0.1em;
+  font-family: roboto-bold;
+}
+main .courses .course {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem;
+  padding: 50px 5%;
+  width: 100%;
+  grid-auto-rows: 1fr;
+}
+main .courses .course .card {
+  width: 350px;
+  height: auto;
+  padding: 10px 8px;
+  border-radius: 11px;
+  border: 2px solid red;
+  background: #fff;
+  transition: 0.2s ease-in-out;
+}
+main .courses .course .card .card-1 {
+  width: 100%;
+}
+main .courses .course .card .card-1 figure {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 11px;
+}
+main .courses .course .card .card-1 figure img {
+  width: 350px;
+  height: auto;
+  cursor: grab;
+  transition: 0.25s ease-in;
+  overflow: hidden;
+}
+main .courses .course .card .card-1 figure:hover img {
+  scale: 1.1;
+}
+main .courses .course .card .card-1 h3 {
+  margin: 11px auto;
+  font-size: 1.5rem;
+  font-family: Roboto-BlackItalic;
+}
+main .courses .course .card .card-1 .price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 11px auto;
+}
+main .courses .course .card .card-1 .price h4 {
+  font-size: 1.4rem;
+  font-family: roboto-bold;
+}
+main .courses .course .card .card-1 ul {
+  list-style: none;
+  margin: 11px auto;
+  list-style-position: inside;
+}
+main .courses .course .card .card-1 ul li {
+  margin: 5px auto;
+  list-style-position: inside;
+  line-height: 1.2;
+  font-size: 1.1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+main .courses .course .card .card-1 .h2 {
+  padding-bottom: 10px;
+  border-bottom: 1.5px solid hsl(14, 86%, 42%);
+}
+main .courses .course .card .card-1 .h3 {
+  line-height: 1.4;
+  letter-spacing: normal;
+  font-family: roboto-bold;
+  margin: 15px auto;
+  font-weight: 500;
+}
+main .courses .course .card .card-1 button {
+  width: 100%;
+  padding: 10px 8px;
+  cursor: pointer;
+  color: #fff;
+  background: hsl(14, 86%, 42%);
+  border-radius: 25px;
+  font-size: 1.2rem;
+  font-family: Roboto-BlackItalic;
+  transition: 0.3s ease-out;
+}
+main .courses .course .card .card-1 button:hover {
+  background: transparent;
+  border: 2px solid hsl(14, 86%, 42%);
+  color: #111;
+}
+main .courses .course .card:hover {
+  scale: 1.02;
+  transform: translateY(-20px);
+  box-shadow: 2px 2px 5px hsl(14, 86%, 42%), -2px -2px 5px hsl(14, 86%, 42%);
+}
+main .portfolio {
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+main .portfolio h2 {
+  margin: 20px auto;
+  font-size: 3rem;
+  font-family: roboto-bold;
+}
+main .portfolio h3 {
+  text-align: center;
+  margin: 20px auto;
+  font-size: 1.2rem;
+  letter-spacing: 0.1em;
+  font-family: roboto-bold;
+}
+main .portfolio .works {
+  width: 100%;
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-rows: auto auto;
+  align-items: center;
+  text-align: center;
+  grid-auto-rows: auto;
+}
+main .portfolio .works .work-block {
+  padding: 10px 8px;
+  border-radius: 12px;
+  margin: 11px auto;
+}
+main .portfolio .works .work-block figure {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 12px;
+}
+main .portfolio .works .work-block figure img {
+  border-radius: 12px;
+  width: 350px;
+  height: auto;
+  transition: 0.4s ease-in;
+}
+main .portfolio .works .work-block figure:hover img {
+  scale: 1.1;
+}
+main .portfolio .works .work-block h4 {
+  text-align: center;
+  margin: 11px auto;
+  font-size: 1.5rem;
+  font-family: Roboto-BlackItalic;
+}/*# sourceMappingURL=main.css.map */

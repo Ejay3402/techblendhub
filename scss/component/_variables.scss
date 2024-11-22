@@ -1,0 +1,33 @@
+//inport fonts
+@font-face {
+    font-family: 'roboto-bold';
+    src: url('../../assets/fonts/Roboto/Roboto-Bold.ttf');
+};
+
+@font-face {
+    font-family: 'Roboto-BlackItalic';
+    src: url('../../assets/fonts/Roboto/Roboto-BlackItalic.ttf');
+};
+
+
+//colors variables
+
+$Red : hsl(14, 86%, 42%);
+$Red-2 : hsl(14, 86%, 12%);
+$Green : hsl(159, 69%, 38%);
+$black : hsl(20, 5%, 0%);
+$bg-color : #f4f4f4;
+$dark-blue : rgb(20, 3, 35);
+
+
+$Rose-50 : hsl(20, 50%, 98%);
+$Rose-100 : hsl(13, 31%, 94%);
+$Rose-300 : hsl(14, 25%, 72%);
+$Rose-400 : hsl(7, 20%, 60%);
+$Rose-500 : hsl(12, 20%, 44%);
+$Rose-900 : hsl(14, 65%, 9%);
+
+//fonts
+
+$roboto-bold : roboto-bold;
+$Roboto-BlackItalic : Roboto-BlackItalic;

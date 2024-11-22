@@ -1,0 +1,97 @@
+@use 'variables' as v;
+
+header {
+    width: 100%;
+    height: 100vh;
+
+    nav {
+        background: #f4f4f4;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 5%;
+        overflow: hidden;
+        z-index: 1;
+
+        //logo
+        figure {
+            width: 100%;
+            height: auto;
+
+            img {
+                width: 200px;
+                height: auto;
+            }
+        }
+        //lists
+        ul {
+            display: flex;
+            list-style: none;
+            li {
+                margin: 0 15px;
+                display: flex;
+                a {
+                    color: v.$black;
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    font-family: v.$roboto-bold;
+                    transition: .300s ease-in;
+                }
+                a:focus,
+                a:hover {
+                    color: v.$Red;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .hero {
+        width: 100%;
+        padding: 150px 5%;
+        display: flex;
+        flex-flow: row wrap;
+        flex: 0 0 200px;
+        gap: 3rem;
+        justify-content: space-between;
+        align-items: center;
+
+        .left {
+            line-height: 1.4;
+            h1 {
+                padding-bottom: 5px;
+                border: 50px;
+                font-size: 4.3rem;
+                margin: 8px auto;
+                font-family: v.$Roboto-BlackItalic;
+                color: v.$dark-blue;
+                span {
+                    color: v.$Rose-500;
+                    border-bottom:  4px solid v.$Red-2;
+                }
+            }
+            h2 {
+                font-size: 2.2rem;
+                font-family: v.$roboto-bold;
+            }
+            h3 {
+                font-size: 1.6rem;
+                font-family: sans-serif;
+                margin: 10px auto;
+                span {
+                    color: rgb(246, 100, 48);
+                }
+            }
+            p {
+                font-size: 1.4;
+                line-height: 1.4;
+                font-family: v.$roboto-bold;
+                letter-spacing: .1em;
+            }
+        }
+    }
+}
