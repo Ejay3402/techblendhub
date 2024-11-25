@@ -5,7 +5,7 @@ const back = document.getElementById(`back`);
 
 enrollBtn.addEventListener("click", () => payment.style.top = '0');
 
-back.addEventListener("click", () => payment.style.top = '-1000px');
+back.addEventListener("click", () => payment.style.top = '-2000px');
 
 //meun bars open and close 
 
