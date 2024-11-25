@@ -1,0 +1,102 @@
+@use 'variables' as v;
+@use 'mixins' as b;
+@use 'breakpoint' as br;
+
+footer {
+    position: relative;
+    width: 100%;
+    background: rgb(220, 208, 208);
+    padding: 15px 8%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+
+    @include br.breakPoint(tablet) {
+        padding: 12px 3%;
+    }
+
+    .contact {
+        width: 100%;
+        height: auto;
+
+        h2 {
+            text-align: center;
+            margin: 20px auto;
+            font-size: clamp(1.555rem, 1.162rem + 1.966vw, 3.3rem);
+            font-family: v.$roboto-bold;
+        }
+        h3 {
+            text-align: center;
+            margin: 20px auto;
+            font-size: clamp(0.855rem, 0.777rem + 0.389vw, 1.2rem);
+            letter-spacing: 1px;
+        }
+
+        .contact-me {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto auto;
+            gap: 3rem;
+
+            @include br.breakPoint(tablet) {
+                grid-template-columns: 1fr;
+            }
+
+            .social-links {
+
+                .con {
+                    ul {
+                        list-style: none;
+                        li {
+                            margin: 11px auto;
+                            display: flex;
+                            align-items: center;
+                        }
+                        a  {
+                            color: v.$Red;
+                            font-size: clamp(0.989rem, 0.919rem + 0.35vw, 1.3rem);
+                        }
+                        svg {
+                            width: 4%;
+                            margin: 0 5px;
+                        }
+                    }
+                }
+                .links {
+                    margin: 50px auto;
+                    svg {
+                        width: 4.5%;
+                        margin: 0 15px;
+                    }
+                }
+            }
+
+            .form {
+                form {
+
+                    label {
+                        font-size: clamp(0.999rem, 0.954rem + 0.226vw, 1.2rem);
+                    }
+
+                    input,
+                    textarea {
+                        width: 100%;
+                        padding: 11px 8px;
+                        resize: none;
+                        margin: 10px auto;
+                        border-radius: 12px;
+                        font-size: clamp(0.999rem, 0.954rem + 0.226vw, 1.2rem);
+                    }
+                    .submit-btn2 {
+                        @include b.button();
+                        padding: 15px 25px;
+                        width: 50%;
+                    }
+                    .submit-btn2:hover {
+                        @include b.button-hover();
+                    }
+                }
+            }
+        }
+
+    }
+}

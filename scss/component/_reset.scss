@@ -7,6 +7,7 @@
     padding: 0;
     box-sizing: border-box;
     outline: 0;
+    font-family: v.$poppins;
 }
 
 html {
@@ -16,6 +17,7 @@ html {
 body {
     font-size: 100%;
     font-weight: 700;
+    font-family: v.$poppins;
     color: v.$black;
     background: v.$bg-color;
 }

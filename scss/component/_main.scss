@@ -1,8 +1,28 @@
 @use 'variables' as v;
+@use 'mixins' as b;
+@use 'breakpoint' as br;
 
 //main session
 
 main {
+
+    //about me
+
+    .about {
+        text-align: center;
+        h3 {
+            font-size: clamp(1.555rem, 1.162rem + 1.966vw, 3.3rem);
+            margin: 8px auto;
+            span {
+                color: rgb(246, 100, 48);
+            }
+        }
+        p {
+            font-size: clamp(0.85rem, 0.704rem + 0.732vw, 1.5rem);
+            line-height: 1.2;
+            padding-bottom: 30px;
+        }
+    }
 
     //courses
     .courses {
@@ -12,28 +32,30 @@ main {
         h2 {
             text-align: center;
             margin: 20px auto;
-            font-size: 3rem;
+            font-size: clamp(1.555rem, 1.162rem + 1.966vw, 3.3rem);
             font-family: v.$roboto-bold;
         }
         .h3 {
             text-align: center;
-            margin: 20px auto;
-            font-size: 1.2rem;
-            letter-spacing: .1em;
-            font-family: v.$roboto-bold;
+            margin: 10px auto;
+            font-size: clamp(0.855rem, 0.777rem + 0.389vw, 1.2rem);
+            letter-spacing: 1px;
         }
     
         .course {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 5rem;
+            grid-template-columns: repeat(auto-fit, minmax(285px, auto));
+            gap: 4rem;
             padding: 50px 5%;
             width: 100%;
+            justify-content: center;
             grid-auto-rows: 1fr;
     
             .card {
                 width: 350px;
+                max-width: 100%;
                 height: auto;
+                margin: 32px auto;
                 padding: 10px 8px;
                 border-radius: 11px;
                 border: 2px solid red;
@@ -61,7 +83,7 @@ main {
                     }
                     h3 {
                         margin: 11px auto;
-                        font-size: 1.5rem;
+                        font-size: clamp(1.3rem, 1.232rem + 0.338vw, 1.6rem);
                         font-family: v.$Roboto-BlackItalic;
                     }
                     .price {
@@ -70,7 +92,7 @@ main {
                         justify-content: space-between;
                         margin: 11px auto;
                         h4 {
-                            font-size: 1.4rem;
+                            font-size: clamp(1.11rem, 1.045rem + 0.327vw, 1.4rem);
                             font-family: v.$roboto-bold;
                         }
                     }
@@ -82,8 +104,7 @@ main {
                             margin: 5px auto;
                             list-style-position: inside;
                             line-height: 1.2;
-                            font-size: 1.1rem;
-                            font-family: Arial, Helvetica, sans-serif;
+                            font-size: clamp(0.75rem, 0.671rem + 0.394vw, 1.1rem);
                             font-weight: 500;
                         }
                     }
@@ -98,29 +119,43 @@ main {
                         margin: 15px auto;
                         font-weight: 500;
                     }
-                    button {
+                    .online {
                         width: 100%;
                         padding: 10px 8px;
                         cursor: pointer;
-                        color: #fff;
-                        background: v.$Red;
+                        text-align: center;
+                        background: transparent;
+                        border: 2px solid v.$Red;
                         border-radius: 25px;
-                        font-size: 1.2rem;
+                        color: #111;
+                        font-size: clamp(0.881rem, 0.809rem + 0.359vw, 1.2rem);
                         font-family: v.$Roboto-BlackItalic;
                         transition: .300s ease-out;
                     }
-                    button:hover {
+                    .online:hover {
                         background: transparent;
                         border: 2px solid v.$Red;
                         color: #111;
                     }
+                    
                 }
             }
             .card:hover {
-                scale: 1.02;
-                transform: translateY(-20px);
+                scale: 1.0001;
+                transform: translateY(-8px);
                 box-shadow: 2px 2px 5px v.$Red, -2px -2px 5px v.$Red;
             }
+            
+        }
+    }
+    .btn {
+        text-align: center;
+
+        button {
+            @include b.button();
+        }
+        button:hover {
+            @include b.button-hover
         }
     }
 
@@ -133,15 +168,14 @@ main {
 
         h2 {
             margin: 20px auto;
-            font-size: 3rem;
+            font-size: clamp(1.555rem, 1.162rem + 1.966vw, 3.3rem);
             font-family: v.$roboto-bold;
         }
-        h3 {
+        .h33 {
             text-align: center;
             margin: 20px auto;
-            font-size: 1.2rem;
-            letter-spacing: .1em;
-            font-family: v.$roboto-bold;
+            font-size: clamp(0.855rem, 0.777rem + 0.389vw, 1.2rem);
+            letter-spacing: 1px;
         }
 
         .works {
@@ -165,6 +199,7 @@ main {
                     img {
                         border-radius: 12px;
                         width: 350px;
+                        max-width: 100%;
                         height: auto;
                         transition: .400s ease-in;
                     }
@@ -175,12 +210,122 @@ main {
                 h4 {
                     text-align: center;
                     margin: 11px auto;
-                    font-size: 1.5rem;
-                    font-family: v.$Roboto-BlackItalic;
+                    font-size: clamp(0.952rem, 0.829rem + 0.617vw, 1.5rem);
                 }
             }
         }
     }
 
 
+    .payment {
+        position: fixed;
+        top: -1000px;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(rgba(5, 5, 5, 0.5), rgba(5, 5, 5, 0.5));
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: .500s ease-in;
+
+        .payment-block {
+            overflow: auto;
+            background: #f4f4f4ff;
+            padding: 15px 3%;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 800px;
+
+            .x-back {
+                text-align: right;
+                svg {
+                    width: 21px;
+                    height: auto;
+                    margin: 4px auto;
+                    cursor: pointer;
+                    transition: .220s ease-in;
+                }
+                svg:hover {
+                    fill: v.$Red;
+                }
+            }
+            h2 {
+                text-align: center;
+                margin: 5px auto;
+                font-size: clamp(1.15rem, 1.004rem + 0.732vw, 1.8rem);
+                font-family: v.$Roboto-BlackItalic;
+            }
+            .bank {
+                text-align: center;
+                
+                h3 {
+                    font-size: clamp(1.055rem, 1rem + 0.276vw, 1.3rem);
+                    margin: 4px auto;
+                }
+                h4 {
+                    margin: 4px auto;
+                    font-size: clamp(0.955rem, 0.81rem + 0.727vw, 1.6rem);
+                    font-family: v.$roboto-bold;
+                    color: rgb(5, 5, 152);
+                }
+            }
+
+            form {
+                width: 100%;
+
+                h2 {
+                    font-size: clamp(0.898rem, 0.819rem + 0.397vw, 1.25rem);
+                }
+
+                label {
+                    margin: 5px auto;
+                    font-size: clamp(0.898rem, 0.812rem + 0.428vw, 1.278rem);
+                }
+                .input {
+                    width: 100%;
+                    margin: 5px auto;
+                    padding: 5px 8px;
+                    border-radius: 11px;
+                    font-size: 0.988rem;
+                    transition: .300s ease-in;
+                }
+                .input:hover,
+                .input:focus {
+                    border: 1px solid v.$Red;
+                }
+                p {
+                    margin: 4px auto;
+                    font-size: 0.887rem;
+                }
+                .plan,
+                .prove {
+                    margin: 5px auto;
+                    font-size: clamp(0.929rem, 0.89rem + 0.193vw, 1.1rem);
+                }
+                .sub {
+                    text-align: center;
+                    
+                    .btn-submit {
+                        @include b.button();
+                        margin: 8px auto;
+                    }
+                    .btn-submit:hover {
+                        @include b.button-hover();
+                    }
+                }
+
+            }
+            
+        }
+    }
+
+}
+
+.show {
+    top: 0;
+}
+.hide {
+    top: -1000;
 }

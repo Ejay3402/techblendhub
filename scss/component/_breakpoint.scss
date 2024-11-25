@@ -1,0 +1,11 @@
+$break-point : (
+    'minlaptop' : 1214px,
+    'removeImg' : 1244px,
+    'tablet' : 800px,
+);
+
+@mixin breakPoint($value) {
+    @media (max-width: map-get($break-point, $value)) {
+        @content;
+    }
+}

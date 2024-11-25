@@ -1,0 +1,21 @@
+@use 'variables' as v;
+
+//button styles
+@mixin button() {
+    padding: 8px 68px;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    background: v.$Red;
+    border-radius: 25px;
+    font-size: clamp(0.755rem, 0.9rem + 0.276vw, 1.2rem);
+    font-family: v.$Roboto-BlackItalic;
+    transition: .300s ease-out;
+}
+
+//button hover styles
+@mixin button-hover() {
+    background: transparent;
+    border: 2px solid v.$Red;
+    color: #111;
+}
