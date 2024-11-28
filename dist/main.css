@@ -238,7 +238,7 @@ main .about h3 {
   margin: 8px auto;
 }
 main .about h3 span {
-  color: rgb(246, 100, 48);
+  color: orangered;
 }
 main .about p {
   font-size: clamp(0.85rem, 0.704rem + 0.732vw, 1.5rem);
@@ -376,7 +376,8 @@ main .btn button {
   transition: 0.3s ease-out;
 }
 main .btn button:hover {
-  background: transparent;
+  background: #fff;
+  scale: 1.02;
   border: 2px solid hsl(14, 86%, 42%);
   color: #111;
 }
@@ -532,7 +533,8 @@ main .payment .payment-block form .sub .btn-submit {
   margin: 8px auto;
 }
 main .payment .payment-block form .sub .btn-submit:hover {
-  background: transparent;
+  background: #fff;
+  scale: 1.02;
   border: 2px solid hsl(14, 86%, 42%);
   color: #111;
 }
@@ -549,18 +551,18 @@ footer {
   position: relative;
   width: 100%;
   background: rgb(220, 208, 208);
-  padding: 15px 8%;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-}
-@media (max-width: 800px) {
-  footer {
-    padding: 12px 3%;
-  }
 }
 footer .contact {
   width: 100%;
   height: auto;
+  padding: 15px 8%;
+}
+@media (max-width: 800px) {
+  footer .contact {
+    padding: 12px 3%;
+  }
 }
 footer .contact h2 {
   text-align: center;
@@ -616,9 +618,14 @@ footer .contact .contact-me .form form textarea {
   width: 100%;
   padding: 11px 8px;
   resize: none;
+  border: none;
   margin: 10px auto;
   border-radius: 12px;
   font-size: clamp(0.999rem, 0.954rem + 0.226vw, 1.2rem);
+}
+footer .contact .contact-me .form form input:focus,
+footer .contact .contact-me .form form textarea:focus {
+  border: 1px solid orangered;
 }
 footer .contact .contact-me .form form .submit-btn2 {
   padding: 8px 68px;
@@ -633,8 +640,23 @@ footer .contact .contact-me .form form .submit-btn2 {
   padding: 15px 25px;
   width: 50%;
 }
-footer .contact .contact-me .form form .submit-btn2:hover {
-  background: transparent;
+footer .contact .contact-me .form form .submit-btn2:hover,
+footer .contact .contact-me .form form .submit-btn2:focus {
+  background: #fff;
+  scale: 1.02;
   border: 2px solid hsl(14, 86%, 42%);
   color: #111;
+}
+footer .info {
+  background: rgb(234, 226, 226);
+  width: 100%;
+  text-align: center;
+  padding: 15px 5px;
+}
+footer .info p {
+  font-size: clamp(0.898rem, 0.819rem + 0.397vw, 1.25rem);
+}
+footer .info p a {
+  color: orangered;
+  text-decoration: underline;
 }/*# sourceMappingURL=main.css.map */

@@ -15,7 +15,8 @@
 
 //button hover styles
 @mixin button-hover() {
-    background: transparent;
+    background: #fff;
+    scale: 1.02;
     border: 2px solid v.$Red;
     color: #111;
 }

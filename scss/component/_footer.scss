@@ -6,17 +6,17 @@ footer {
     position: relative;
     width: 100%;
     background: rgb(220, 208, 208);
-    padding: 15px 8%;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
-
-    @include br.breakPoint(tablet) {
-        padding: 12px 3%;
-    }
 
     .contact {
         width: 100%;
         height: auto;
+        padding: 15px 8%;
+
+        @include br.breakPoint(tablet) {
+            padding: 12px 3%;
+        }
 
         h2 {
             text-align: center;
@@ -82,21 +82,43 @@ footer {
                         width: 100%;
                         padding: 11px 8px;
                         resize: none;
+                        border: none;
                         margin: 10px auto;
                         border-radius: 12px;
                         font-size: clamp(0.999rem, 0.954rem + 0.226vw, 1.2rem);
+                    }
+                    input:focus,
+                    textarea:focus {
+                        border: 1px solid orangered;
                     }
                     .submit-btn2 {
                         @include b.button();
                         padding: 15px 25px;
                         width: 50%;
                     }
-                    .submit-btn2:hover {
+                    .submit-btn2:hover,
+                    .submit-btn2:focus {
                         @include b.button-hover();
                     }
                 }
             }
         }
 
+
     }
+    .info {
+        background: rgb(234, 226, 226);
+        width: 100%;
+        text-align: center;
+        padding: 15px 5px;
+
+        p {
+            font-size: clamp(0.898rem, 0.819rem + 0.397vw, 1.25rem);
+
+            a {
+                color: orangered;
+                text-decoration: underline;
+            }
+        }
+    }   
 }
