@@ -7,7 +7,7 @@
     text-align: center;
     color: #fff;
     background: v.$Red;
-    border-radius: 25px;
+    border-radius: 11px;
     font-size: clamp(0.755rem, 0.9rem + 0.276vw, 1.2rem);
     font-family: v.$Roboto-BlackItalic;
     transition: .300s ease-out;
@@ -15,7 +15,8 @@
 
 //button hover styles
 @mixin button-hover() {
-    background: #fff;
+    background: rgb(245, 196, 196);
+    filter: drop-shadow(0 0 1em rgb(4, 4, 148));
     scale: 1.02;
     border: 2px solid v.$Red;
     color: #111;

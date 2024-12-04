@@ -45,6 +45,7 @@ header {
             img {
                 width: 200px;
                 height: auto;
+                filter: drop-shadow(1rem 1rem 3em red);
                 @include b.breakPoint(tablet) {
                     width: 130px;
                 }
@@ -162,13 +163,18 @@ header {
             figure {
                 width: 100%;
                 height: auto;
+                transition: .300s ease-in;
+                filter: drop-shadow(1rem 1rem 3em red);
                 img {
-                    width: 280px;
+                    width: 360px;
                     height: auto;
-                    @include b.breakPoint(tablet) {
-                        max-width: 250px;
+                    @include b.breakPoint(removeImg) {
+                        width: 250px;
                     }
                 }
+            }
+            figure:hover img{
+                filter: drop-shadow(1rem 1rem 3em rgb(4, 4, 148));
             }
         }
     }

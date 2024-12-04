@@ -121,21 +121,17 @@ main {
                     }
                     .online {
                         width: 100%;
-                        padding: 10px 8px;
-                        cursor: pointer;
+                        user-select: none;
                         text-align: center;
-                        background: transparent;
-                        border: 2px solid v.$Red;
-                        border-radius: 25px;
                         color: #111;
                         font-size: clamp(0.881rem, 0.809rem + 0.359vw, 1.2rem);
                         font-family: v.$Roboto-BlackItalic;
-                        transition: .300s ease-out;
                     }
-                    .online:hover {
-                        background: transparent;
-                        border: 2px solid v.$Red;
-                        color: #111;
+                    .online::before {
+                        content: '-';
+                    }
+                    .online::after {
+                        content: '-';
                     }
                     
                 }
@@ -143,7 +139,7 @@ main {
             .card:hover {
                 scale: 1.0001;
                 transform: translateY(-8px);
-                box-shadow: 2px 2px 5px v.$Red, -2px -2px 5px v.$Red;
+                filter: drop-shadow(5px 0 0.5em v.$Red);
             }
             
         }

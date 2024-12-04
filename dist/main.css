@@ -86,6 +86,7 @@ header nav figure {
 header nav figure img {
   width: 200px;
   height: auto;
+  filter: drop-shadow(1rem 1rem 3em red);
 }
 @media (max-width: 800px) {
   header nav figure img {
@@ -219,15 +220,20 @@ header .hero .left h2 {
 header .hero .right figure {
   width: 100%;
   height: auto;
+  transition: 0.3s ease-in;
+  filter: drop-shadow(1rem 1rem 3em red);
 }
 header .hero .right figure img {
-  width: 280px;
+  width: 360px;
   height: auto;
 }
-@media (max-width: 800px) {
+@media (max-width: 944px) {
   header .hero .right figure img {
-    max-width: 250px;
+    width: 250px;
   }
+}
+header .hero .right figure:hover img {
+  filter: drop-shadow(1rem 1rem 3em rgb(4, 4, 148));
 }
 
 main .about {
@@ -340,26 +346,24 @@ main .courses .course .card .card-1 .h3 {
 }
 main .courses .course .card .card-1 .online {
   width: 100%;
-  padding: 10px 8px;
-  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   text-align: center;
-  background: transparent;
-  border: 2px solid hsl(14, 86%, 42%);
-  border-radius: 25px;
   color: #111;
   font-size: clamp(0.881rem, 0.809rem + 0.359vw, 1.2rem);
   font-family: Roboto-BlackItalic;
-  transition: 0.3s ease-out;
 }
-main .courses .course .card .card-1 .online:hover {
-  background: transparent;
-  border: 2px solid hsl(14, 86%, 42%);
-  color: #111;
+main .courses .course .card .card-1 .online::before {
+  content: "-";
+}
+main .courses .course .card .card-1 .online::after {
+  content: "-";
 }
 main .courses .course .card:hover {
   scale: 1.0001;
   transform: translateY(-8px);
-  box-shadow: 2px 2px 5px hsl(14, 86%, 42%), -2px -2px 5px hsl(14, 86%, 42%);
+  filter: drop-shadow(5px 0 0.5em hsl(14, 86%, 42%));
 }
 main .btn {
   text-align: center;
@@ -370,13 +374,14 @@ main .btn button {
   text-align: center;
   color: #fff;
   background: hsl(14, 86%, 42%);
-  border-radius: 25px;
+  border-radius: 11px;
   font-size: clamp(0.755rem, 0.9rem + 0.276vw, 1.2rem);
   font-family: Roboto-BlackItalic;
   transition: 0.3s ease-out;
 }
 main .btn button:hover {
-  background: #fff;
+  background: rgb(245, 196, 196);
+  filter: drop-shadow(0 0 1em rgb(4, 4, 148));
   scale: 1.02;
   border: 2px solid hsl(14, 86%, 42%);
   color: #111;
@@ -526,14 +531,15 @@ main .payment .payment-block form .sub .btn-submit {
   text-align: center;
   color: #fff;
   background: hsl(14, 86%, 42%);
-  border-radius: 25px;
+  border-radius: 11px;
   font-size: clamp(0.755rem, 0.9rem + 0.276vw, 1.2rem);
   font-family: Roboto-BlackItalic;
   transition: 0.3s ease-out;
   margin: 8px auto;
 }
 main .payment .payment-block form .sub .btn-submit:hover {
-  background: #fff;
+  background: rgb(245, 196, 196);
+  filter: drop-shadow(0 0 1em rgb(4, 4, 148));
   scale: 1.02;
   border: 2px solid hsl(14, 86%, 42%);
   color: #111;
@@ -633,7 +639,7 @@ footer .contact .contact-me .form form .submit-btn2 {
   text-align: center;
   color: #fff;
   background: hsl(14, 86%, 42%);
-  border-radius: 25px;
+  border-radius: 11px;
   font-size: clamp(0.755rem, 0.9rem + 0.276vw, 1.2rem);
   font-family: Roboto-BlackItalic;
   transition: 0.3s ease-out;
@@ -642,7 +648,8 @@ footer .contact .contact-me .form form .submit-btn2 {
 }
 footer .contact .contact-me .form form .submit-btn2:hover,
 footer .contact .contact-me .form form .submit-btn2:focus {
-  background: #fff;
+  background: rgb(245, 196, 196);
+  filter: drop-shadow(0 0 1em rgb(4, 4, 148));
   scale: 1.02;
   border: 2px solid hsl(14, 86%, 42%);
   color: #111;
