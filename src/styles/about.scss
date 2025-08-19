@@ -1,0 +1,95 @@
+@use 'mixin.scss' as m;
+
+/* about */
+.about {
+    padding: 2rem 4rem;
+    width: 100%;
+    background: rgb(244, 240, 240);
+    
+    
+    padding: 2rem 4rem;
+    @media (max-width: 798px) {
+      padding:  1.2rem 1rem;
+    }
+
+    h2 {
+        text-align: center;
+        margin: 10px auto;
+        font-size: 3rem;
+    }
+    h3 {
+        @extend h2;
+        font-size: 1.3rem;
+        color: gray;
+        font-weight: 550;
+    }
+
+    .about-grid {
+        display: grid;
+        width: 100%;
+        gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(386px, 2fr));
+
+        &__left {
+            figure {
+                width: 100%;
+                overflow: hidden;
+                height: auto;
+                
+                img {
+                    transition: .752s ease-in-out;
+                    height: 65vh;
+                    width: 100%;
+                }
+               
+            }
+            figure:hover img{
+                 scale: 1.2;
+                 cursor: grab;
+            }
+        }
+        &__right {
+            width: 100%;
+            
+            h3 {
+                text-align: left;
+                color: rgb(41, 40, 40);
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                letter-spacing: .1em;
+                font-size: 1.5rem;
+            }
+
+            p {
+                margin: 10px auto;
+                color: #111;
+            }
+
+            .prove {
+                display: flex;
+                justify-content: space-between;
+                flex-flow: row wrap;
+                margin: 15px auto;
+
+                h4 {
+                    display: inline;
+                    padding: 10px 5px;
+                    margin: 10px  auto;
+                    border: 2px solid gray;
+                    border-radius: 11px;
+                    font-size: 0.7rem;
+                }
+            }
+
+            button {
+                @include m.btn;
+                margin: 15px auto;
+                background: #111;
+                
+
+                &:hover {
+                    @include m.btn-hover
+                }
+            }
+        }
+    }
+}

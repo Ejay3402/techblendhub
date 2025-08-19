@@ -1,0 +1,143 @@
+@use 'mixin.scss' as m;
+
+footer {
+    background: hsl(222 84% 5%);
+    box-shadow: 2px 2px 4px hsl(217 91% 60%), -2px -2px 4px hsl(217 91% 60%);
+    color: #f8f4f4;
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+    padding: 2rem 4rem;
+
+
+    @media (max-width: 798px) {
+      padding:  1.2rem 1rem;
+    }
+
+    h2 {
+        text-align: center;
+        margin: 10px auto;
+        font-size: 3rem;
+    }
+    h3 {
+        @extend h2;
+        font-size: 1.3rem;
+        color: gray;
+        font-weight: 550;
+    }
+
+    .footer-grid {
+        margin: 1px;
+        display: grid;
+        width: 100%;
+        gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(386px, 2fr));
+
+        .footer-left {
+            .com {
+                h4 {
+                    font-size: 1.2rem;
+                    margin-bottom: 1rem;
+                }
+                a {
+                    display: block;
+                    color: #f8f4f4;
+                    text-decoration: none;
+                    margin-bottom: 0.5rem;
+                    font-size: 1.2rem;
+
+                    &:hover {
+                        color: #b35555;
+                    }
+
+                    .icons-1 {
+                        margin-right: 0.5rem;
+                        vertical-align: middle;
+                    }
+                }
+            }
+            .socials-links {
+                margin-top: 2rem;
+                h4 {
+                    font-size: 1.2rem;
+                    margin-bottom: 1rem;
+                }
+                .links {
+                    display: flex;
+                    gap: 1rem;
+
+                    a {
+                        color: #f8f4f4;
+                        font-size: 1.3rem;
+                        text-decoration: none;
+
+                        &:hover {
+                            color: #b35555;
+                        }
+
+                        .icons-2 {
+                            vertical-align: middle;
+                        }
+                    }
+                }
+            }
+        }
+        .footer-right {
+
+            label {
+                display: block;
+                margin: 0.5rem auto;
+                font-size: 1.2rem;
+            }
+            input,
+            textarea {
+                width: 100%;
+                margin: 5px auto;
+                padding: 0.5rem;
+                border: none;
+                border-radius: 5px;
+                background-color: #c7bebe;
+                color: hsl(222 84% 5%);
+                font-size: 1rem;
+            }
+            .btn-form-sub {
+                @include m.btn;
+                width: 50%;
+                margin-top: 1rem;
+
+                &:hover, &:focus {
+                    @include m.btn-hover;
+                    background: #111;
+                }
+            }
+        }
+
+    }
+
+}
+
+.copy-right {
+width: 100%;
+padding: 28px 8px; 
+text-align: center;
+background: hsl(217 91% 4%);
+
+p {
+    display: block;
+    align-items: center;
+    .ic {
+        margin: 0 5px;
+        vertical-align: middle;
+    }
+        text-align: center;
+        font-size: clamp(0.838rem, 0.767rem + 0.355vw, 1.111rem);
+        letter-spacing: 1px;
+        color: #f8f4f4  ;
+    }
+    a {
+        color: #dc3030;
+        transition: .233s ease-in-out;
+        &:hover {
+            text-decoration: underline;
+        } 
+    }
+}

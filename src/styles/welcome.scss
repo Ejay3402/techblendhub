@@ -1,0 +1,39 @@
+
+.welcome {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h1 {
+        font-size: 2.5rem; /* 1.2rem -  2.5rem */
+        letter-spacing: .1em;
+        font-family: sans-serif;
+        font-weight: 700;
+    }
+
+    figure {
+        width: 30%;
+        height: auto;
+        
+        img {
+            width: 100%;
+            height: auto;
+            animation:  zoom 2s ease-in infinite both;
+        }
+    }
+
+    
+@keyframes zoom {
+    50% {
+        scale: 1.1;
+    }
+    100% {
+        scale: 1;
+    }
+}
+
+}
+

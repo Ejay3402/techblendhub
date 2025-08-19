@@ -1,0 +1,19 @@
+
+/* button */
+
+@mixin btn {
+    padding: 10px 25px;
+    background: rgb(255, 100, 0);
+    border: none;
+    border-radius: 6px;
+    color: aliceblue;
+    transition: .400s ease-in;
+}
+
+/* button hover */
+
+@mixin btn-hover {
+    background: rgb(190, 81, 8);
+    cursor: pointer;
+    color: #f4eded;
+}

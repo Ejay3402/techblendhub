@@ -1,0 +1,46 @@
+
+.peoplesay {
+    width: 100%;
+    background: rgb(244, 240, 240);
+    
+    padding: 2rem 4rem;
+    @media (max-width: 798px) {
+      padding:  1.2rem 1rem;
+    }
+
+    h2 {
+        text-align: center;
+        margin: 10px auto;
+        font-size: 3rem;
+    }
+    h3 {
+        @extend h2;
+        font-size: 1.3rem;
+        color: gray;
+        font-weight: 550;
+    }
+
+    .testmocard {
+        text-align: center;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+
+        figure {
+            width: 100%;
+            margin: 12px auto;
+            height: 100%;
+            overflow: hidden;
+            border-radius: 15px;
+        }
+        img {
+            width: 100%;
+            transition: .500s ease-in-out;
+            height: 50vh;
+        }
+        figure:hover img {
+            scale: 1.1;
+        }
+    }
+
+}
