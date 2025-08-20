@@ -1,7 +1,5 @@
 import './../styles/footer.scss';
 import { FcCopyright } from "react-icons/fc";
-import { FcDownload } from "react-icons/fc";
-import { FcNext } from "react-icons/fc";
 import { FaTiktok } from "react-icons/fa6";
 import { FaTwitter } from "react-icons/fa6";
 import { GrFacebookOption } from "react-icons/gr";

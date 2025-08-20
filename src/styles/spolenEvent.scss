@@ -1,0 +1,48 @@
+
+.spokenEvent {
+    padding: 2rem 4rem;
+    width: 100%;
+    background: rgb(244, 240, 240);
+    
+    
+    padding: 2rem 4rem;
+    @media (max-width: 798px) {
+      padding:  1.2rem 1rem;
+    }
+
+    h2 {
+        text-align: center;
+        margin: 10px auto;
+        font-size: 3rem;
+    }
+    h3 {
+        @extend h2;
+        font-size: 1.3rem;
+        color: gray;
+        font-weight: 550;
+    }
+
+    .spokeneventImg {
+        display: grid;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(386px, 2fr));
+
+        figure {
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            
+            img {
+                transition: .450s ease-in;
+                width: 100%;
+                height: auto;            }
+        }
+
+        &:hover img {
+            scale: 1.15;
+        }
+    }
+}

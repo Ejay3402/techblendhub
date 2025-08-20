@@ -1,4 +1,5 @@
 import React from 'react'
+import { FcDownload } from "react-icons/fc";
 import dennis2 from './../assets/images/dennis2.jpg';
 import cv from './../assets/cv pdf/BIO 112 CA Questions 21.pdf';
 import './../styles/about.scss';
@@ -32,7 +33,7 @@ const About = () => {
                     <h4>Brand Strategy</h4>
                   </div>
                  <a href="" download={cv} >
-                    <button data-aos="fade-down">Download CV</button>
+                    <button data-aos="fade-down">Download CV <FcDownload className='icon-d'/></button>
                  </a>
             </div>
         </div>

@@ -7,12 +7,13 @@ import About from "./About";
 import PeopleSay from "./PeopleSay";
 import Footer from "./Footer";
 import CopyRight from "./CopyRight";
+import SpokenEvent from "./SpokenEvent";
 
 
 const Techblendhub = () => {
 
   useEffect( () => {
-      AOS.init({
+      AOS.init({  
       duration: 1200, // animation duration in ms
       offset: 100, // trigger point from top
       once: true, // animation runs only once
@@ -24,6 +25,7 @@ const Techblendhub = () => {
       <Navbar />
       <Hero />
       <About />
+      <SpokenEvent />
       <PeopleSay />
       <Footer />
       <CopyRight />

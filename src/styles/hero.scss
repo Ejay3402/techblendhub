@@ -41,8 +41,18 @@
         .hero-btn {
             @include m.btn();
 
+            .icon-next {
+                vertical-align: middle;
+                color: #fff;
+                transition: .500s ease-in-out;
+            }
+
             &:hover {
                 @include m.btn-hover();
+            }
+            &:hover .icon-next{
+                margin-left: 5px;
+                rotate: -60deg;
             }
         }
     }

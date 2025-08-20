@@ -84,10 +84,20 @@
                 @include m.btn;
                 margin: 15px auto;
                 background: #111;
+
+                .icon-d {
+                    vertical-align: middle;
+                    color: #fff;
+                    transition: .500s ease-in-out;
+                }
                 
 
                 &:hover {
                     @include m.btn-hover
+                }
+                &:hover .icon-d , &:focus .icon-d {
+                    rotate: 360deg;
+                    margin-left: 5px;
                 }
             }
         }
