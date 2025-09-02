@@ -5,6 +5,7 @@
     padding: 10px 25px;
     background: rgb(255, 100, 0);
     border: none;
+    font-size: 1.15rem;
     border-radius: 6px;
     color: aliceblue;
     transition: .400s ease-in;
@@ -16,4 +17,12 @@
     background: rgb(190, 81, 8);
     cursor: pointer;
     color: #f4eded;
+}
+
+@mixin h2 {
+    font-size: 3rem;
+    font-weight: 650;
+    color: #111;
+    text-align: center;
+    margin: 10px auto;
 }

@@ -27,7 +27,7 @@ const Footer = () => {
                 <div className="com">
                     
                     <h4  data-aos="fade-right">How to reach me</h4>
-                    <a href="#" data-aos="fade-up"><HiOutlineMail className='icons-1'/> olamarydennis123@gmail.com</a>
+                    <a href="#" data-aos="fade-up"><HiOutlineMail className='icons-1'/> olamarydennis123@gmail.com</a> <br />
                     <a href="" data-aos="fade-up"><FaLocationDot className='icons-1'/> Nigeria, Lagos</a>
                 </div>
 

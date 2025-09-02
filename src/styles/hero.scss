@@ -12,21 +12,27 @@
 
     @media (max-width: 798px) {
       padding:  4.7rem 1rem;
-    flex-direction: column;
+      flex-direction: column;
+    }
+    @media (max-width: 498px) {
+      padding:  4.7rem 0.7rem;
     }
     
 
     &__left {
-        padding: 5px;
+        padding: 5px auto;
 
         .h4 {
-            font-size: 0.900rem;
+            font-size: clamp(0.795rem, 0.769rem + 0.128vw, 0.92rem);
             color: gray;
             letter-spacing: .1em;
+                @media (max-width: 798px) {
+                letter-spacing: normal;
+                }
         }
         .h1 {
             margin: 10px auto;
-            font-size: 3rem;
+            font-size: clamp(1.85rem, 1.613rem + 1.189vw, 3.01rem);
             font-weight: 700;
 
         }
@@ -38,8 +44,31 @@
             letter-spacing: 1px;
             font-size: 1.1rem;
         }
+
+        .my-coures-btn {
+            display: none;
+
+                @media (max-width: 471px) {
+                    width: 100%;
+                    display: block;
+                    @include m.btn();
+                    margin: 10px auto;
+                    background: transparent;
+                    border: 2.1px solid rgb(190, 81, 8);
+                    color: #000;
+
+                    &:hover {
+                        @include m.btn-hover();
+                    }
+                }
+        }
+        
         .hero-btn {
             @include m.btn();
+
+                @media (max-width: 471px) {
+                    width: 100%;
+                }
 
             .icon-next {
                 vertical-align: middle;

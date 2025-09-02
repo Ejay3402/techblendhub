@@ -6,10 +6,8 @@ import {motion, AnimatePresence } from 'framer-motion';
 const Welcome = () => {
   return (
     <div className='welcome'>
-
-        <h1 data-aos="fade-down">Welcome To</h1>
         <figure>
-            <img data-aos="fade-up" src={TechblendhubLogo} alt="Techblendhub TechblendhubLogo techblendhub logo" />
+            <img data-aos="zoom-in" src={TechblendhubLogo} alt="Techblendhub TechblendhubLogo techblendhub logo" />
         </figure>
 
     </div>

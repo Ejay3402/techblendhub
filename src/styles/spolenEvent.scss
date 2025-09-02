@@ -22,8 +22,8 @@
         font-weight: 550;
     }
 
+    /*         display: grid;
     .spokeneventImg {
-        display: grid;
         align-items: center;
         text-align: center;
         width: 100%;
@@ -43,6 +43,60 @@
 
         &:hover img {
             scale: 1.15;
+        } */
+
+        .image-slider {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+
+
+
+        .swiper-slide {
+            
+                figure {
+                    width: 100%;
+                    height: auto;
+                    overflow: hidden;
+                    
+                    img {
+                        transition: .450s ease-in;
+                        width: 100%;
+                        margin: 0 10px;
+                        height: auto;         
+                    }
+                    &:hover img {
+                        scale: 1.15;
+                    }
+                }
+
         }
-    }
+
+        /* Pagination Dots */
+        .swiper-pagination-bullet {
+            background: #333;
+            opacity: 0.7;
+        }
+        .swiper-pagination-bullet-active {
+            background: #000;
+            opacity: 1;
+        }
+
+        /* Navigation Arrows */
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: #000; /* arrow color */
+            transition: 0.3s;
+        }
+
+        .swiper-button-next:hover,
+        .swiper-button-prev:hover {
+            color: #ff6600; /* hover color */
+        }
+        }
+
+     
+
+    
+
 }

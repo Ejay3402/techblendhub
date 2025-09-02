@@ -22,7 +22,7 @@ const About = () => {
             <div className="about-grid__right">
                 <h3 data-aos="fade-down">Professional Educator</h3>
                 <p data-aos="fade-up">
-                    With over 5 years in the cryptocurrency space, I've navigated multiple market cycles and developed a deep understanding of both technical analysis and blockchain fundamentals. My mission is to bridge the gap between complex DeFi protocols and Blockchain Development.
+                    Hello i am <span>Dennis ola</span> also know has <span>Dr Daphs</span>, With over 5 years in the cryptocurrency space, I've navigated multiple market cycles and developed a deep understanding of both technical analysis and blockchain fundamentals. My mission is to bridge the gap between complex DeFi protocols and Blockchain Development.
                 </p>
                 <p data-aos="fade-right">
                     Let’s collaborate to unlock your brand’s full potential and create lasting connections with your audience.
@@ -31,6 +31,7 @@ const About = () => {
                     <h4>Content Strategy</h4>
                     <h4>Blockchain Development</h4>
                     <h4>Brand Strategy</h4>
+                    <h4>Project Manaager</h4>
                   </div>
                  <a href="" download={cv} >
                     <button data-aos="fade-down">Download CV <FcDownload className='icon-d'/></button>
