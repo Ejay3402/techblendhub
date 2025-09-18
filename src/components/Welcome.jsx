@@ -1,6 +1,6 @@
 import React from 'react'
 import './../styles/welcome.scss'
-import TechblendhubLogo from './../assets/logo/logo with bg.png';
+import TechblendhubLogo from './../logo/tbhlogo.png';
 import {motion, AnimatePresence } from 'framer-motion';
 
 const Welcome = () => {

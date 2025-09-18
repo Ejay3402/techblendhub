@@ -8,6 +8,11 @@ import PeopleSay from "./PeopleSay";
 import Footer from "./Footer";
 import CopyRight from "./CopyRight";
 import SpokenEvent from "./SpokenEvent";
+import Videos from "./Videos";
+
+/* styles */
+import './../styles/reset.scss';
+import AreaOfSec from "./AreaOfSec";
 
 
 const Techblendhub = () => {
@@ -25,6 +30,8 @@ const Techblendhub = () => {
       <Navbar />
       <Hero />
       <About />
+      <AreaOfSec />
+      <Videos />
       <SpokenEvent />
       <PeopleSay />
       <Footer />

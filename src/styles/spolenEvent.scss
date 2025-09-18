@@ -1,8 +1,9 @@
+@use 'mixin.scss' as m;
 
 .spokenEvent {
     padding: 2rem 4rem;
     width: 100%;
-    background: rgb(244, 240, 240);
+    background: #111;
     
     
     padding: 2rem 4rem;
@@ -11,15 +12,10 @@
     }
 
     h2 {
-        text-align: center;
-        margin: 10px auto;
-        font-size: 3rem;
+        @include m.h2;
     }
     h3 {
-        @extend h2;
-        font-size: 1.3rem;
-        color: gray;
-        font-weight: 550;
+        @include m.h3;
     }
 
     /*         display: grid;

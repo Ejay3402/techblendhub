@@ -9,24 +9,30 @@
     align-items: center;
     justify-content: space-between;
     padding:  2.7rem 3.9rem;
-    background: #fff;
+    background: #000;
     transition: background 0.3s ease, box-shadow 0.3s ease;
     z-index: 100;
     
     @media (max-width: 798px) {
       padding:  1.2rem 1rem;
     }
+    @media (max-width: 450px) {
+      padding:  1.7rem 1rem;
+    }
 
         &.scrolled {
-            background: rgba(237, 231, 231, 0.95);
+            background: #111;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(10px);
             transition: .666s ease-in;
         }
 
         &__logo {
-            width: 15%;
+            width: 10.5%;
             cursor: pointer;
+            @media (max-width: 498px) {
+                width: 20%;
+            }
 
             img {
                 width: 100%;
@@ -42,9 +48,9 @@
 
             a {
                 text-decoration: none;
-                color: #222;
+                color: #777;
                 font-weight: 650;
-                font-size: 1.2rem;
+                font-size: clamp(0.958rem, 0.954rem + 0.021vw, 1.2rem);
                 position: relative;
                 transition: color 0.3s ease;
 
@@ -77,11 +83,13 @@
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
+    margin-right: 0;
+    padding-right: 0;
 
     span {
-      width: 25px;
+      width: 22px;
       height: 3px;
-      background: #222;
+      background: #999;
       border-radius: 2px;
       transition: 0.3s;
     }
@@ -120,7 +128,8 @@
     width: 75%;
     max-width: 300px;
     height: 100vh;
-    background: white;
+    background: #111;
+    color: #999;
     padding: 2rem;
     z-index: 100;
 
@@ -135,8 +144,8 @@
 
         a {
           text-decoration: none;
-          color: #222;
-          font-size: 1.2rem;
+          color: #999;
+          font-size: clamp(0.958rem, 0.954rem + 0.021vw, 1.2rem);
           font-weight: 500;
         }
       }

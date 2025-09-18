@@ -5,7 +5,7 @@
     padding: 10px 25px;
     background: rgb(255, 100, 0);
     border: none;
-    font-size: 1.15rem;
+    font-size: clamp(0.888rem, 0.834rem + 0.269vw, 1.15rem);
     border-radius: 6px;
     color: aliceblue;
     transition: .400s ease-in;
@@ -20,9 +20,24 @@
 }
 
 @mixin h2 {
-    font-size: 3rem;
+    font-size: clamp(1.75rem, 1.493rem + 1.291vw, 3.01rem);
     font-weight: 650;
-    color: #111;
     text-align: center;
     margin: 10px auto;
 }
+
+@mixin h3 {
+    font-size: clamp(0.87rem, 0.547rem + 1.619vw, 2.45rem);
+    color: gray;
+    font-weight: 550;
+    text-align: center;
+    margin: 10px auto;
+}
+
+@mixin h4 {
+    font-size: clamp(0.88rem, 0.804rem + 0.379vw, 1.25rem);
+    color: gray;
+    font-weight: 550;
+    margin: 10px auto;
+}
+

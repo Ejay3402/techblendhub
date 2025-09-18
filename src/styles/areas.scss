@@ -1,0 +1,48 @@
+@use 'mixin.scss' as m;
+
+.area {
+    width: 100%;
+    background: #111;
+    color: #fff;
+    
+    
+    padding: 2rem 4rem;
+    @media (max-width: 798px) {
+      padding:  1.2rem 1rem;
+    }
+
+    h2 {
+        @include m.h2;
+    }
+    /* h3 {
+        @include m.h3;
+    } */
+
+    .areas-grid {
+        display: grid;
+        width: 100%;
+        gap: 1.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+        .area-box {
+            padding: 17px 12px;
+            background: #000;
+            border-radius: 11px;
+            transition: .555s ease-in-out;
+
+            h3 {
+                margin: 13px auto;
+            }
+
+            p {
+                line-height: 1.3;
+                margin-top: 11.5px;
+            }
+
+            &:hover {
+                border: 1.56px solid #d7caca;
+                scale: 1.05;
+            }
+        }
+    }
+}

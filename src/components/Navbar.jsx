@@ -1,4 +1,4 @@
-import TechblendhubLogo from './../assets/logo/logo no bg.png';
+import TechblendhubLogo from './../logo/tbhlogo.png';
 import {motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import './../styles/navbar.scss';

@@ -1,8 +1,9 @@
 @use 'mixin.scss' as m;
 
 footer {
-    background: hsl(222 84% 5%);
-    box-shadow: 2px 2px 4px hsl(217 91% 60%), -2px -2px 4px hsl(217 91% 60%);
+    width: 100%;
+    background: #000;
+    box-shadow: 2px 2px 4px #111, -2px -2px 4px #111;
     color: #f8f4f4;
     border-top-left-radius: 11px;
     border-top-right-radius: 11px;
@@ -14,15 +15,11 @@ footer {
     }
 
     h2 {
-        text-align: center;
-        margin: 10px auto;
-        font-size: 3rem;
+        @include m.h2;
+        color: #f8f4f4;
     }
     h3 {
-        @extend h2;
-        font-size: 1.3rem;
-        color: gray;
-        font-weight: 550;
+        @include m.h3;
     }
 
     .footer-grid {
@@ -30,9 +27,11 @@ footer {
         display: grid;
         width: 100%;
         gap: 2rem;
-        grid-template-columns: repeat(auto-fit, minmax(386px, 2fr));
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 
         .footer-left {
+            width: 100%;
+            
             .com {
                 h4 {
                     font-size: 1.2rem;
@@ -81,9 +80,10 @@ footer {
             }
         }
         .footer-right {
+                 width: 100%;
 
+                 
             label {
-                display: block;
                 margin: 0.5rem auto;
                 font-size: 1.2rem;
             }
@@ -95,7 +95,7 @@ footer {
                 border: none;
                 font-weight: 600;
                 border-radius: 5px;
-                background-color: #c7bebe;
+                background-color: #111;
                 color: hsl(222 84% 5%);
                 font-size: 1rem;
                 transition: .255s ease-in;
@@ -124,7 +124,7 @@ footer {
 width: 100%;
 padding: 28px 8px; 
 text-align: center;
-background: hsl(217 91% 4%);
+background: #111;
 
 p {
     display: block;

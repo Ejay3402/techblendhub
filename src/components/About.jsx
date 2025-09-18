@@ -1,7 +1,7 @@
 import React from 'react'
 import { FcDownload } from "react-icons/fc";
 import dennis2 from './../assets/images/dennis2.jpg';
-import cv from './../assets/cv pdf/BIO 112 CA Questions 21.pdf';
+import cv from './../assets/cv pdf/My Resume.pdf';
 import './../styles/about.scss';
 
 const About = () => {
@@ -29,11 +29,11 @@ const About = () => {
                 </p>
                   <div className="prove" data-aos="fade-up">
                     <h4>Content Strategy</h4>
-                    <h4>Blockchain Development</h4>
                     <h4>Brand Strategy</h4>
+                    <h4>Blockchain Development</h4>
                     <h4>Project Manaager</h4>
                   </div>
-                 <a href="" download={cv} >
+                 <a href="/techblendhub/My Resume.pdf" download={cv}  alt="Download CV dennis ola cv dr daphs cv">
                     <button data-aos="fade-down">Download CV <FcDownload className='icon-d'/></button>
                  </a>
             </div>
