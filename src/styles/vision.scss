@@ -1,0 +1,21 @@
+@use 'mixin.scss' as m;
+
+.vision {
+    width: 100%;
+    background: #111;
+    color: #fff;
+    text-align: center;
+    
+    
+    padding: 2rem 4rem;
+    @media (max-width: 798px) {
+      padding:  1.2rem 1rem;
+    }
+
+    h2 {
+        @include m.h2;
+    }
+    p {
+        @include m.p;
+    }
+}
