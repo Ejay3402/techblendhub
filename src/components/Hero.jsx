@@ -5,7 +5,7 @@ import drDaphs from './../assets/images/dennis2-removebg-preview.png';
 
 const Hero = () => {
   return (
-    <div className='hero'>
+    <div className='hero'  data-aos="zoom-in">
         <div className="hero__left">
             <h4 className='h4' data-aos="fade-down">Content Marketer | Blockchain Educator</h4>
             <h1 className='h1' data-aos="fade-up">Hello! I’m <span>Dennis Ola</span></h1>

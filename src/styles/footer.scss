@@ -34,14 +34,10 @@ footer {
             
             .com {
                 h4 {
-                    font-size: 1.2rem;
-                    margin-bottom: 1rem;
+                   @include m.h4;
                 }
                 a {
-                    display: block;
-                    color: #f8f4f4;
-                    text-decoration: none;
-                    font-size: 1.2rem;
+                    @include m.p;
 
                     &:hover {
                         color: #b35555;
@@ -56,7 +52,7 @@ footer {
             .socials-links {
                 margin-top: 2rem;
                 h4 {
-                    font-size: 1.2rem;
+                    @include m.h4;
                     margin-bottom: 1rem;
                 }
                 .links {
@@ -64,9 +60,8 @@ footer {
                     gap: 1rem;
 
                     a {
-                        color: #f8f4f4;
-                        font-size: 1.3rem;
-                        text-decoration: none;
+                        @include m.p;
+                        margin: 8px 10px;
 
                         &:hover {
                             color: #b35555;
@@ -82,10 +77,12 @@ footer {
         .footer-right {
                  width: 100%;
 
+                 h3 {
+                    @include m.h4;
+                 }
                  
             label {
-                margin: 0.5rem auto;
-                font-size: 1.2rem;
+                @include m.p;
             }
             input,
             textarea {
@@ -97,7 +94,7 @@ footer {
                 border-radius: 5px;
                 background-color: #111;
                 color: hsl(222 84% 5%);
-                font-size: 1rem;
+                font-size: 0.980rem;
                 transition: .255s ease-in;
 
                 &:hover, &:focus {
@@ -134,9 +131,7 @@ p {
         vertical-align: middle;
     }
         text-align: center;
-        font-size: clamp(0.838rem, 0.767rem + 0.355vw, 1.111rem);
-        letter-spacing: 1px;
-        color: #f8f4f4  ;
+        @include m.p;
     }
     a {
         color: #dc3030;

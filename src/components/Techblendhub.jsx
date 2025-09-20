@@ -13,6 +13,8 @@ import Videos from "./Videos";
 /* styles */
 import './../styles/reset.scss';
 import AreaOfSec from "./AreaOfSec";
+import Vision from "./Vision ";
+import Companys from "./Companys";
 
 
 const Techblendhub = () => {
@@ -30,7 +32,9 @@ const Techblendhub = () => {
       <Navbar />
       <Hero />
       <About />
+      <Vision />
       <AreaOfSec />
+      <Companys />
       <Videos />
       <SpokenEvent />
       <PeopleSay />
