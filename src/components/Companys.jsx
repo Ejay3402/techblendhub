@@ -1,13 +1,11 @@
 import React from 'react'
-import './../styles/com.scss';
-
-
 //logos
-import stonfi  from "./../assets/com-imgs/STON_fi_Logo.jpg";
+import stonfi  from "./../assets/com-imgs/STON_fi_Logo.png";
 import rocketverse  from "./../assets/com-imgs/rocketverse.jpg";
 import superteamng  from "./../assets/com-imgs/superteamng.jpg";
 import boundless  from "./../assets/com-imgs/boundless.png";
 
+import './../styles/com.scss';
 
 const Companys = () => {
 
