@@ -1,6 +1,6 @@
+import drDaphs from './../assets/images/dennis.png';
 import './../styles/hero.scss'
 import { FcNext } from "react-icons/fc";
-import drDaphs from './../assets/images/dennis2-removebg-preview.png';
 
 
 const Hero = () => {
