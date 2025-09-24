@@ -9,17 +9,17 @@ const AreaOfSec = () => {
         {
             title : `Blockchain Technology`,
             content : `Deep understanding of how blockchain systems work and how to implement them effectively`,
-            icon: <FaCubes className='ixo' size={40} strokeWidth={2} fill="#FFD400"/>,
+            icon: <FaCubes data-aos="fade-down" className='ixo' size={40} strokeWidth={2} fill="#FFD400"/>,
         },
         {
             title : `Decentralized Finance Educator`,
             content : `Teaching what decentralized finance is, how it works, and why it matters in the future of money.`,
-            icon: <GraduationCap className='ixo' size={40} strokeWidth={2} color="#FFD400"/>,
+            icon: <GraduationCap data-aos="fade-down" className='ixo' size={40} strokeWidth={2} color="#FFD400"/>,
         },
         {
             title : `Content Creator`,
             content : `creating engaging, valuable, and creative material across different platforms to inform, entertain, or inspire an audience.`,
-            icon: <Video className='ixo' size={40} strokeWidth={2} color="#FFD400"/>,
+            icon: <Video data-aos="fade-down" className='ixo' size={40} strokeWidth={2} color="#FFD400"/>,
         },
     ]
 
@@ -32,7 +32,7 @@ const AreaOfSec = () => {
             {areas.map( ({title, content, icon}) => (
                 <div className="area-box" data-aos="fade-up"key={Math.random()}>
                     {icon}
-                    <h3>{title}</h3>
+                    <h3  data-aos="fade-right">{title}</h3>
                     <p>{content}</p>
                 </div>
             ))}

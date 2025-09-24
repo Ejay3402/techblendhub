@@ -15,6 +15,7 @@ import './../styles/reset.scss';
 import AreaOfSec from "./AreaOfSec";
 import Vision from "./Vision ";
 import Companys from "./Companys";
+import Rates from "./Rates";
 
 
 const Techblendhub = () => {
@@ -31,6 +32,7 @@ const Techblendhub = () => {
     <>
       <Navbar />
       <Hero />
+      <Rates />
       <About />
       <Vision />
       <AreaOfSec />

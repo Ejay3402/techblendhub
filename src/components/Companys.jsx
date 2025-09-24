@@ -14,7 +14,7 @@ const Companys = () => {
     const logos = [stonfi, rocketverse, superteamng, boundless];
 
   return (
-    <div className='com-logo' data-aos="zoom-in">
+    <div className='com-logo'>
 
         <h2  data-aos="fade-up">As <span>Featured</span> On</h2>
 

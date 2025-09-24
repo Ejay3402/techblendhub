@@ -1,0 +1,32 @@
+@use 'mixin.scss' as m;
+
+.r {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+
+
+            padding: 2rem 4rem;
+    @media (max-width: 798px) {
+      padding:  1.2rem 1rem;
+    }
+
+    .rate {
+    width: 100%;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+    .rate-box {
+        padding: 20px;
+        border-radius: 11px;
+        background: #111;
+        margin-bottom: 10px;
+
+        h3 {
+            @include m.h2;
+            margin: 10px auto;
+        }
+    }
+}
+}
