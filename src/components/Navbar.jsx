@@ -3,6 +3,7 @@ import {motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import './../styles/navbar.scss';
 import { a } from 'framer-motion/client';
+import MyCourses from './MyCourses';
 
 
 const Navbar = () => {
@@ -29,7 +30,7 @@ const Navbar = () => {
         },
         {
             name : 'My Courses',
-            url : 'https://techblendhub.vercel.app'
+            url : 'https/MyCourses.jsx'
         },
         {
             name : 'Book secction',

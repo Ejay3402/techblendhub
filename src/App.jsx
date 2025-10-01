@@ -12,8 +12,8 @@ const App = () => {
     useEffect( () => {
         AOS.init({
         duration: 1200, // animation duration in ms
-        offset: 100, // trigger point from top
-        once: true, // animation runs only once
+        offset: 110, // trigger point from top
+        once: false, // animation runs only once
       });
     }, []);
 
